@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    Hello, Amanda here!
+    <SignIn></SignIn>
   </div>
 </template>
 
 <script>
+import SignIn from './pages/SignIn.vue'
+
 export default {
   name: 'App',
+  components: {
+    SignIn
+  }
 }
 </script>
 
