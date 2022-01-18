@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <input @input="onInput" />
+  <div class="container">
+    <label for="city">Onde ?</label>
+    <input @input="onInput" id="city" placeholder="Cidade..."/>
   </div>
 </template>
 
@@ -17,12 +18,20 @@ export default {
 </script>
 
 <style scoped>
-  input {
-    width: 75%;
+  .container {
+    width: 70vw;
+    align-self: center; /* alinha ao centro da página no eixo y, é filho de container que é um display flex */
+
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem auto; /* alinha ao centro no eixo x */
   }
 
-  div {
-    text-align: center;
-    margin: 20px;
+  input {
+    width: 100%;
+    margin: .5rem 0 .5rem 0;
+    padding: 10px 0 10px 30px;
+    border: 2px solid;
+    border-radius: 6px;
   }
 </style>
