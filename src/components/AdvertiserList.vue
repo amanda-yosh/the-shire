@@ -1,8 +1,8 @@
 <template>
   <div>
     <Advertiser
-      v-for="listing in listings"
-      :key="listing.account.id"
+      v-for="(listing, index) in listings"
+      :key="index"
     >
     </Advertiser>
   </div>
