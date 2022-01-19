@@ -5,6 +5,12 @@ const villageHouse = '&unitSubTypes=VILLAGE_HOUSE&unitTypes=HOME&usageTypes=RESI
 
 export async function getListings(searchTerm) {
   const searchTermStringified = new URLSearchParams(searchTerm)
-  const response = await get(`${BASE_URL}${villageHouse}${searchTermStringified}`)
-  return response.data.search.result.listings
+
+  try {
+    const response = await get(`${BASE_URL}${villageHouse}${searchTermStringified}`)
+    return response.data.search.result.listings
+  } catch (error) {
+    console.log(error)
+    return []
+  }
 }
