@@ -22,8 +22,9 @@ export default {
   },
 
   methods: {
-    onTermChange: function (searchTerm) {
-      getAdvertisers(searchTerm)
+    onTermChange: async function (searchTerm) {
+      this.advertsList = await getAdvertisers(searchTerm)
+      console.log('depois', this.advertsList)
     },
   }
 }
