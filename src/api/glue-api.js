@@ -22,19 +22,14 @@ const villageHouse = '&unitSubTypes=VILLAGE_HOUSE&unitTypes=HOME&usageTypes=RESI
 // &size=24
 // &from=0
 
-export function getAdvertisers(searchTerm) {
+export async function getAdvertisers(searchTerm) {
   // const searchTermStringified = qs.stringify(searchTerm)
   const searchTermStringified = new URLSearchParams(searchTerm)
-
-
-  axios
+  const response = await axios
     .get(`${ROOT_URL}${villageHouse}${searchTermStringified}`, {
       headers: {
         'x-domain': 'www.zapimoveis.com.br',
       },
     }) // return a promise
-    .then(response => {
-      console.log(response.data)
-      return response.data
-    })
+    return response.data.search.result.listings
 }
