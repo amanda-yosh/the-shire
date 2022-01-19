@@ -6,7 +6,7 @@
 
 <script>
 import { getListings } from './api/glue-api'
-import SearchBar from './components/SearchBar.vue'
+import SearchBar from './components/SearchBar/SearchBar.vue'
 
 export default {
   name: 'App',
