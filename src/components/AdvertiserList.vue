@@ -3,6 +3,7 @@
     <Advertiser
       v-for="(listing, index) in listings"
       :key="index"
+      :listing="listing"
     >
     </Advertiser>
   </div>
