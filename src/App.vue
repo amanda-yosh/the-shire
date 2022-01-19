@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <AdvertiserList :listings="advertsList"></AdvertiserList>
+    <ListingList :listings="advertsList"></ListingList>
   </div>
 </template>
 
 <script>
 import { getListings } from './api/glue-api'
-import AdvertiserList from './components/AdvertiserList.vue'
+import ListingList from './components/ListingList/ListingList.vue'
 import SearchBar from './components/SearchBar/SearchBar.vue'
 
 export default {
@@ -15,7 +15,7 @@ export default {
 
   components: {
     SearchBar,
-    AdvertiserList
+    ListingList
   },
 
   data() {
