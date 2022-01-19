@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { getAdvertisers } from './api/glue-api'
+import { getListings } from './api/glue-api'
 import SearchBar from './components/SearchBar.vue'
 
 export default {
@@ -23,8 +23,7 @@ export default {
 
   methods: {
     onTermChange: async function (searchTerm) {
-      this.advertsList = await getAdvertisers(searchTerm)
-      console.log('depois', this.advertsList)
+      this.advertsList = await getListings(searchTerm)
     },
   }
 }
