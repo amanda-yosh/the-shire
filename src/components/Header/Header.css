@@ -1,0 +1,12 @@
+.background {
+  width: 100vw;
+  height: 90px;
+  background-image: url('../../assets/the-shire-1.jpeg');
+
+  display: flex;
+}
+
+.logo {
+  align-self: center;
+  margin-left: 20px;
+}
