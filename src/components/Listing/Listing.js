@@ -8,9 +8,13 @@ export default {
   },
 
   methods: {
-    goToDetailPage(id) {
+    goToDetailPage() {
+      const { listing: { id }, link: { href } } = this.listing
       router.push({ name: 'listing', params: { id } }) // router para tela de detail passando o id
-    }
+      const keyLocalStorage = `${id}_href`
+
+      window.localStorage.setItem(keyLocalStorage, href)
+    },
   },
 
   computed: {
