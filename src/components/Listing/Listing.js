@@ -1,7 +1,25 @@
+import { router } from '../../main.js'
+
 export default {
   name: "Listing",
 
   props: {
     listing: Object,
+  },
+
+  methods: {
+    goToDetailPage(id) {
+      router.push({ name: 'listing', params: { id } }) // router para tela de detail passando o id
+    }
+  },
+
+  computed: {
+    getFirstMediasElementURL() {
+      let { url } = this.listing.medias[0]
+
+      url = url.replace('/{action}/{width}x{height}/', '/crop/420x236/')
+
+      return url
+    }
   },
 };
