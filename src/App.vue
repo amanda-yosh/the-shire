@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <SearchBar @termChange="onTermChange"></SearchBar>
-    <ListingList :listings="advertsList"></ListingList>
+    <router-view/>
   </div>
 </template>
 
