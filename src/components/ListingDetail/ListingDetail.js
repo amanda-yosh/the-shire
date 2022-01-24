@@ -33,6 +33,5 @@ export default ({
     const href = this.listingHref()
 
     this.listing = await getListing(href)
-    console.log('this.listing', this.listing)
   }
 })
