@@ -23,9 +23,8 @@ export default ({
 
     listingHref() {
       const id = this.getIdByPathname()
-      const href = this.getHrefFromId(id)
 
-      return href
+      return this.getHrefFromId(id)
     }
   },
 
