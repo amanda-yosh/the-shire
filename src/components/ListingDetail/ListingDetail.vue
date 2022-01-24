@@ -1,15 +1,2 @@
-<template>
-  <div>
-    Listing Detail
-  </div>
-</template>
-
-<script>
-export default ({
-  name: 'ListingDetail'
-})
-</script>
-
-<style scoped>
-
-</style>
+<template src="./ListingDetail.html" />
+<script src="./ListingDetail.js" />
