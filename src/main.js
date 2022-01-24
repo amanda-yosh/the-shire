@@ -32,10 +32,5 @@ export const router = new VueRouter({
 new Vue({
   router,
   store,
-  methods: {
-    goTo(name, params) {
-      this.$router.push({ name, params });
-    }
-  },
   render: h => h(App),
 }).$mount('#app')
