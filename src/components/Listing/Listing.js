@@ -1,3 +1,4 @@
+import { mapMutations } from 'vuex';
 import { router } from '../../main.js'
 
 export default {
@@ -8,12 +9,16 @@ export default {
   },
 
   methods: {
+    ...mapMutations(['setHref']),
+
     goToDetailPage() {
       const { listing: { id }, link: { href } } = this.listing
-      router.push({ name: 'listing', params: { id } }) // router para tela de detail passando o id
       const keyLocalStorage = `${id}_href`
 
-      window.localStorage.setItem(keyLocalStorage, href)
+      window.localStorage.setItem(keyLocalStorage, href) // save href in localStorage
+      this.$store.commit('setHref', { id, href }) // save href in storage
+
+      router.push({ name: 'listing', params: { id } }) // router for Detail page passing id
     },
   },
 
