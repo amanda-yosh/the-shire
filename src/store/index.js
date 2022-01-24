@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
-import listing from './modules/listing'
+import listing from './listing'
 
 Vue.use(Vuex)
 
