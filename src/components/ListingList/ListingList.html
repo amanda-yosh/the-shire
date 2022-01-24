@@ -1,7 +1,7 @@
 <div>
   <Listing
     v-for="(listing, index) in listings"
-    :key="index"
+    :key="listing['id']"
     :listing="listing"
   />
 </div>
