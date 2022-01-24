@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import Home from './pages/Home/Home.vue'
 import Detail from './pages/Detail/Detail.vue'
-import store from './store';
+import store from './store'
 
 Vue.use(VueRouter) // tells Vue that VouRouter exists
 

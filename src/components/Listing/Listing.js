@@ -1,8 +1,8 @@
-import { mapMutations } from 'vuex';
+import { mapMutations } from 'vuex'
 import { router } from '../../main.js'
 
 export default {
-  name: "Listing",
+  name: 'Listing',
 
   props: {
     listing: Object,
@@ -31,4 +31,4 @@ export default {
       return url
     }
   },
-};
+}
