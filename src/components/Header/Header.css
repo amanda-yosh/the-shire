@@ -13,6 +13,7 @@
 
 .logo {
   margin-left: 20px;
+  padding: 0 20px;
 }
 
 .link {
@@ -21,10 +22,23 @@
 }
 
 .nav {
-  margin-right: 20px;
+  height: 100%;
   list-style: none;
 }
 
-.nav li {
+.item {
+  height: 100%;
+  padding: 0 20px;
+  margin-right: 20px;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:hover {
+  color:#1E5128;
+  background-color: #D8E9A8;
+  transition: ease-in .3s;
 }
