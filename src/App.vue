@@ -1,33 +1,26 @@
 <template>
   <div id="app">
-    <SearchBar @termChange="onTermChange"></SearchBar>
+    <Header />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import { getListings } from './api/glue-api'
-import SearchBar from './components/SearchBar/SearchBar.vue'
+import Header from './components/Header/Header.vue'
 
 export default {
   name: 'App',
 
   components: {
-    SearchBar,
-  },
-
-  data() {
-    return {
-      advertsList: []
-    }
-  },
-
-  methods: {
-    onTermChange: async function (searchTerm) {
-      this.advertsList = await getListings(searchTerm)
-    },
+    Header
   }
 }
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 </style>

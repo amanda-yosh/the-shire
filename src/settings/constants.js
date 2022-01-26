@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://glue-api.zapimoveis.com.br/v2/listings?categoryPage=RESULT'
+export const BASE_URL = 'https://glue-api.zapimoveis.com.br/v2'

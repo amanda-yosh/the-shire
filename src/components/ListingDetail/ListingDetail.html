@@ -1,0 +1,11 @@
+<div>
+  <div v-if="isLoading">
+    Carregando detalhes do anúncio...
+  </div>
+  <div v-else>
+    <div class="description">
+      <h2>Descrição</h2>
+      <p v-html="listing.data.listing.description"></p>
+    </div>
+  </div>
+</div>
