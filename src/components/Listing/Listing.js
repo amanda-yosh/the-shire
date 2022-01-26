@@ -1,5 +1,5 @@
 import { mapMutations } from 'vuex'
-import { router } from '../../main.js'
+import { router } from '../../router/index.js'
 
 export default {
   name: 'Listing',

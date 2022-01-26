@@ -1,9 +1,7 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import App from './App.vue'
-import Home from './pages/Home/Home.vue'
-import Detail from './pages/Detail/Detail.vue'
 import store from './store'
+import { router } from './router/index.js'
 
 Vue.config.productionTip = false // Preventing production start message
 
