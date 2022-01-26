@@ -6,7 +6,7 @@ export default ({
 
   data() {
     return {
-      isLoading: false,
+      isLoading: true,
       listing: {}
     }
   },
@@ -32,5 +32,6 @@ export default ({
     const href = this.listingHref()
 
     this.listing = await getListing(href)
+    this.isLoading = false
   }
 })
