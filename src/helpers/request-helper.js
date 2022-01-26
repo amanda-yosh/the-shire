@@ -6,7 +6,7 @@ import axios from 'axios'
  * @param { Object } headers - The header used on request
  * @returns { Promise }
  */
- export function get(url, headers = {}) {
+export function get(url, headers = {}) {
   return axios.get(url, {
     headers: {
       'x-domain': 'www.zapimoveis.com.br',
