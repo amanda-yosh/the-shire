@@ -1,12 +1,30 @@
-.background {
+.container {
   width: 100vw;
   height: 90px;
-  background-image: url('../../assets/the-shire-1.jpeg');
+  background-color: #4E9F3D;
 
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Berkshire Swash', cursive;
+  color: #D8E9A8;
 }
 
 .logo {
-  align-self: center;
   margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #D8E9A8;
+}
+
+.nav {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.nav li {
+  cursor: pointer;
 }
