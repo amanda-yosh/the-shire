@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <div v-if="isLoading">
     Carregando detalhes do anúncio...
   </div>
@@ -30,7 +30,19 @@
     </div>
     <div class="description">
       <h2>Descrição</h2>
-      <p v-html="listing.data.listing.description"></p>
+      <p>Preço: {{ listing.listing.pricingInfos[0].price }}</p>
+      <p>Condomínio: {{ listing.listing.pricingInfos[0].monthlyCondoFee }}</p>
+      <p>IPTU: {{ listing.listing.pricingInfos[0].yearlyIptu }}</p>
+      <p>{{ listing.listing.pricingInfos[0].businessType }}</p>
+      <p v-html="listing.listing.description"></p>
+      <p>{{ listing.listing.searchableAmenities }}</p>
+    </div>
+    <div class="contact">
+      <h2>Contato</h2>
+      <img :src="advertiserLogoUrl" alt="">
+      <p>Anunciante: {{ listing.account.name }}</p>
+      <p>Número do anunciante: {{ listing.listing.advertiserContact.phones[0] }}</p>
+      <p v-if="listing.listing.advertiserContact.whatsappNumber">Whatsapp: {{ listing.listing.advertiserContact.whatsappNumber }}</p>
     </div>
   </div>
 </div>

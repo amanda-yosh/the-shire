@@ -22,3 +22,7 @@
 .custom-dot {
   background-color: red;
 }
+
+.description, .contact {
+  margin-top: 3rem;
+}
