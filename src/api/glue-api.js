@@ -20,7 +20,7 @@ export async function getListings(searchTerm) {
 export async function getListing(href) {
   try {
     const response = await get(`${BASE_URL}${listingPage}${href}`)
-    return response
+    return response.data
   } catch (error) {
     console.log(error)
     return {}

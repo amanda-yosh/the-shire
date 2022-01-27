@@ -10,9 +10,18 @@ export default ({
       listing: {}
     }
   },
-  
+
   computed: {
     ...mapGetters(['getHrefFromId']),
+
+    imageURL() {
+      let medias = this.listing.medias
+      medias.forEach((obj) => {
+        obj.url = obj.url.replace('/{action}/{width}x{height}/', '/crop/420x236/')
+      })
+
+      return medias
+    }
   },
 
   methods: {
