@@ -32,13 +32,11 @@ export default ({
   computed: {
     ...mapGetters(['getHrefFromId']),
 
-    imageURL() {
-      let medias = this.listing.medias
-      medias.forEach((obj) => {
-        obj.url = obj.url.replace('/{action}/{width}x{height}/', '/crop/420x236/')
-      })
-
-      return medias
+    advertiserLogoUrl() {
+      let url = this.listing.account.logoUrl
+      url = url.replace('/{action}/{width}x{height}/', '/fit-in/136x94/')
+      console.log(url)
+      return url
     }
   },
 
@@ -52,6 +50,15 @@ export default ({
       const id = this.getIdByPathname()
 
       return this.getHrefFromId(id)
+    },
+
+    imageURL() {
+      let medias = this.listing.medias
+      medias.forEach((obj) => {
+        obj.url = obj.url.replace('/{action}/{width}x{height}/', '/fit-in/800x360/')
+      })
+
+      this.listing.medias = medias
     }
   },
 
@@ -60,5 +67,6 @@ export default ({
 
     this.listing = await getListing(href)
     this.isLoading = false
+    this.imageURL()
   }
 })
