@@ -1,8 +1,8 @@
 <div class="container">
   <div class="advertiser-details">
     <h1 class="title">{{ listing["listing"]["title"] }}</h1>
-    <span>{{ listing["listing"]["originalAddress"]["locationId"] }}</span>
-    <p class="information">{{ listing["listing"]["description"] }}</p>
+    <span class="location-info">{{ showLocationId }}</span>
+    <p class="information" v-html="listing['listing']['description']"></p>
 
     <div class="control">
       <button @click="goToDetailPage(listing['listing']['id'])" class="btn">Saiba mais</button>
@@ -16,21 +16,22 @@
     />
 
     <div class="info">
-      <h2 class="sub-title">Características do imóvel</h2>
       <ul>
         <li>
-          <strong>Quartos : </strong>{{ listing["listing"]["bedrooms"][0] }}
+          <strong>{{ listing["listing"]["bedrooms"][0] }}</strong>
+          <i class="icon fas fa-bed"></i>
         </li>
         <li>
-          <strong>Banheiros : </strong
-          >{{ listing["listing"]["bathrooms"][0] }}
+          <strong>{{ listing["listing"]["bathrooms"][0] }}</strong>
+          <i class="icon fas fa-bath"></i>
         </li>
         <li>
-          <strong>Suítes: </strong>{{ listing["listing"]["suites"][0] }}
+          <strong>{{ listing["listing"]["usableAreas"][0] }}m²</strong>
+          <i class="icon fas fa-ruler-horizontal"></i>
         </li>
         <li>
-          <strong>Garagem: </strong
-          >{{ listing["listing"]["parkingSpaces"][0] }}
+          <strong>{{ listing["listing"]["parkingSpaces"][0] }}</strong>
+          <i class="icon fas fa-car"></i>
         </li>
       </ul>
     </div>

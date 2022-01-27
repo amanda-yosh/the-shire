@@ -29,6 +29,14 @@ export default {
       url = url.replace('/{action}/{width}x{height}/', '/crop/420x236/')
 
       return url
+    },
+
+    showLocationId() {
+      let locationId = this.listing['listing']['originalAddress']['locationId']
+
+      locationId = locationId.replace('>NULL', '').replaceAll('>', ' > ')
+
+      return locationId
     }
   },
 }
