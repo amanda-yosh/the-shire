@@ -35,10 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all .3s ease-out;
 }
 
 .item:hover {
   color:#1E5128;
   background-color: #D8E9A8;
-  transition: ease-in .3s;
 }
