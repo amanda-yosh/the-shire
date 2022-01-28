@@ -26,3 +26,18 @@
 .description, .contact {
   margin-top: 3rem;
 }
+
+.contact {
+  background-color: #D8E9A8;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.advertiser-info p{
+  margin-left: 20px;
+}

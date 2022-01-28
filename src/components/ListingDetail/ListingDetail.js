@@ -37,7 +37,13 @@ export default ({
       url = url.replace('/{action}/{width}x{height}/', '/fit-in/136x94/')
       console.log(url)
       return url
-    }
+    },
+
+    // showPhones() {
+    //   this.listing.listing.advertiserContact.phones.forEach((el) => {
+    //     el.
+    //   })
+    // }
   },
 
   methods: {
