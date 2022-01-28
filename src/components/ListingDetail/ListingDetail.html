@@ -6,7 +6,7 @@
     <div class="image-container">
       <VueSlickCarousel :="settings">
         <div class="carousel-bg-image" v-for="media in listing.medias">
-          <img class="carousel-image" :src="media.url" alt="">
+          <img class="carousel-image" :src="media.url" alt="Imagem do anúncio">
         </div>
 
         <template #prevArrow="arrowOption">
@@ -42,7 +42,7 @@
     <div class="contact">
       <h2>Contato</h2>
       <div class="content">
-        <img :src="advertiserLogoUrl" alt="">
+        <img :src="advertiserLogoUrl" alt="Logo do Anunciante">
         <div class="advertiser-info">
           <p>{{ listing.account.name }}</p>
           <p>Número do anunciante: {{ listing.listing.advertiserContact.phones[0] }}</p>
