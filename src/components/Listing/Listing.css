@@ -4,50 +4,50 @@
   margin: 1rem auto;
   border: 1px solid #e2e2e2;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.9);
   overflow: hidden;
+
+  display: flex;
 
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   color: #191A19;
+
+  transition: all .3s ease-out;
 }
 
 .container:hover {
   box-shadow: 0 10px 20px 1px #e2e2e2;
-  transition: ease-in .2s;
 }
 
 .advertiser-details {
-  position: relative;
-  float: left;
   width: 50%;
   height: 100%;
-  padding: 30px;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-rows: 1fr .5fr 3fr 1fr;
+
   text-align: left;
   overflow: hidden;
 }
 
 .title {
   display: inline-block;
-  font-size: 32px;
-  line-height: 80%;
-  margin: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .location-info {
   color: #1E5128;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .advertiser-details > p {
-  font-size: 24px;
-  height: 38%;
+  font-size: 14px;
+  margin: 15px 0;
   overflow: hidden;
-}
-
-.control {
-  position: absolute;
-  bottom: 20%;
-  left: 30%;
 }
 
 .btn {
@@ -59,12 +59,10 @@
   border-radius: 6px;
 
   cursor: pointer;
-  transform: translateY(0px);
   transition: 0.3s linear;
 }
 
 .btn:hover {
-  transform: translateY(-6px);
   background: #4E9F3D;
   color: #D8E9A8;
 }
@@ -89,37 +87,43 @@
   bottom: 0;
   color: #191A19;
   line-height: 1.8;
-  cursor: no-drop;
+  /* cursor: no-drop; */
   transition: all 0.3s ease-out;
-  transform: translateY(100%);
+  transform: translateY(-100px);
 }
 
-.advertiser-image:hover .info {
-  transform: translateY(0);
-}
-
-.info ul {
+.info-list {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.info ul li {
+.info-list li {
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: #D8E9A8;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
-  margin-left: 10px;
+  margin-left: 10px; /* space between circules */
   transition: 0.3s ease;
 }
 
-/* .info ul li:hover {} */
+.icon, .icon-verse{
+  color: #1E5128;
+}
 
-.icon {
-  color: #191A19;
+.advertiser-image:hover .info {
+  transform: translateY(270px);
+}
+
+.icon-verse {
+  display: none;
+}
+
+.icon:hover + .icon-verse {
+  display: block;
 }
