@@ -1,5 +1,6 @@
 import { mapMutations } from 'vuex'
 import { router } from '../../router/index.js'
+import { normalizeImageUrl } from '../../helpers/utils'
 
 export default {
   name: 'Listing',
@@ -25,18 +26,14 @@ export default {
   computed: {
     getFirstMediasElementURL() {
       let { url } = this.listing.medias[0]
-
-      url = url.replace('/{action}/{width}x{height}/', '/crop/420x236/')
-
-      return url
+      
+      return normalizeImageUrl(url, '/crop/420x236/')
     },
 
     showLocationId() {
       let locationId = this.listing['listing']['originalAddress']['locationId']
 
-      locationId = locationId.replace('>NULL', '').replaceAll('>', ' > ')
-
-      return locationId
+      return locationId.replace('>NULL', '').replaceAll('>', ' > ')
     }
   },
 }

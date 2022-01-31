@@ -2,8 +2,8 @@ import { getListing } from '../../api/glue-api'
 import { mapGetters } from 'vuex'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import { normalizeImageUrl } from '../../helpers/utils'
 
 export default ({
   name: 'ListingDetail',
@@ -18,8 +18,6 @@ export default ({
       listing: {},
       settings: {
         arrows: true,
-        // dots:true,
-        // dotsClass: 'slick-dots custom-dot-class',
         edgeFriction: 0.35,
         infinite: true,
         speed: 500,
@@ -34,16 +32,9 @@ export default ({
 
     advertiserLogoUrl() {
       let url = this.listing.account.logoUrl
-      url = url.replace('/{action}/{width}x{height}/', '/fit-in/136x94/')
-      console.log(url)
-      return url
-    },
 
-    // showPhones() {
-    //   this.listing.listing.advertiserContact.phones.forEach((el) => {
-    //     el.
-    //   })
-    // }
+      return normalizeImageUrl(url, '/fit-in/136x94/')
+    },
   },
 
   methods: {
@@ -59,9 +50,9 @@ export default ({
     },
 
     imageURL() {
-      let medias = this.listing.medias
-      medias.forEach((obj) => {
-        obj.url = obj.url.replace('/{action}/{width}x{height}/', '/fit-in/800x360/')
+      const medias = this.listing.medias
+      medias.forEach(media => {
+        media.url = normalizeImageUrl(media.url, '/fit-in/800x360/')
       })
 
       this.listing.medias = medias
