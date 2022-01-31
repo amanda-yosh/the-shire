@@ -25,13 +25,13 @@ export default {
 
   computed: {
     getFirstMediasElementURL() {
-      let { url } = this.listing.medias[0]
+      const { url } = this.listing.medias[0]
       
       return normalizeImageUrl(url, '/crop/420x236/')
     },
 
     showLocationId() {
-      let locationId = this.listing['listing']['originalAddress']['locationId']
+      const locationId = this.listing['listing']['originalAddress']['locationId']
 
       return locationId.replace('>NULL', '').replaceAll('>', ' > ')
     }

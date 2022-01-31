@@ -31,7 +31,7 @@ export default ({
     ...mapGetters(['getHrefFromId']),
 
     advertiserLogoUrl() {
-      let url = this.listing.account.logoUrl
+      const url = this.listing.account.logoUrl
 
       return normalizeImageUrl(url, '/fit-in/136x94/')
     },
@@ -40,6 +40,7 @@ export default ({
   methods: {
     getIdByPathname() {
       const id = window.location.pathname
+      
       return id.replace('/listing/', '')
     },
 
