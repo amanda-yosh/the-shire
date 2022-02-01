@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="advertiser-details">
+    <h1 class="title">{{ listing["listing"]["title"] }}</h1>
+    <span class="location-info">{{ showLocationId }}</span>
+    <p class="information" v-html="listing['listing']['description']"></p>  
+    <button @click="goToDetailPage(listing['listing']['id'])" class="btn">Saiba mais</button>
+  </div>
+  <div class="advertiser-image">
+    <img
+      class="img"
+      :src="getFirstMediasElementURL"
+      alt="Imagem do anúncio"
+    />
+
+    <div class="info">
+      <ul class="info-list">
+        <li>
+          <strong class="icon-verse">{{ listing["listing"]["bedrooms"][0] }}</strong>
+          <i class="icon fas fa-bed"></i>
+        </li>
+        <li>
+          <strong class="icon-verse">{{ listing["listing"]["bathrooms"][0] }}</strong>
+          <i class="icon fas fa-bath"></i>
+        </li>
+        <li>
+          <strong class="icon-verse">{{ listing["listing"]["usableAreas"][0] }}m²</strong>
+          <i class="icon fas fa-ruler-horizontal"></i>
+        </li>
+        <li>
+          <strong class="icon-verse">{{ listing["listing"]["parkingSpaces"][0] }}</strong>
+          <i class="icon fas fa-car"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

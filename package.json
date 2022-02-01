@@ -13,6 +13,7 @@
     "firebase": "^9.6.3",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3",
+    "vue-slick-carousel": "^1.0.6",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -24,20 +25,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "typescript": "^4.5.4",
     "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
   },
   "browserslist": [
     "> 1%",

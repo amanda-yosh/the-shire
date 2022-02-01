@@ -1,0 +1,8 @@
+<div class="container">
+  <h2 class="title">{{ listings.length }} imóveis disponíveis</h2>
+  <Listing
+    v-for="(listing, index) in listings"
+    :key="listing['id']"
+    :listing="listing"
+  />
+</div>

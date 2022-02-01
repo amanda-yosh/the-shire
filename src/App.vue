@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <SignIn></SignIn>
+    <Header />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import SignIn from './pages/SignIn.vue'
+import Header from './components/Header/Header.vue'
 
 export default {
   name: 'App',
+
   components: {
-    SignIn
+    Header
   }
 }
 </script>
