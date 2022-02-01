@@ -1,26 +1,3 @@
-<template>
-  <div id="app">
-    <Header />
-    <router-view/>
-  </div>
-</template>
-
-<script>
-import Header from './components/Header/Header.vue'
-
-export default {
-  name: 'App',
-
-  components: {
-    Header
-  }
-}
-</script>
-
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-</style>
+<template src="App.html" />
+<script src="App.js">
+<style src="App.css" />
