@@ -1,0 +1,47 @@
+.login-container {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.title {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 32px;
+  color: #D8E9A8;
+}
+
+.explanation {
+  margin: 10px;
+}
+
+.form-link {
+  color: #4E9F3D;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.forms-container {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.btn-facebook, .btn-google {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.btn-facebook {
+  background-color: #36579a;
+}
+
+.btn-google {
+  background-color: #4285f4;
+}
