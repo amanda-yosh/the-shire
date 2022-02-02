@@ -1,0 +1,90 @@
+.login-container {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.title {
+  font-family: 'Berkshire Swash', cursive;
+  color: #D8E9A8;
+}
+
+.explanation {
+  margin: 10px;
+}
+
+.form-link {
+  color: #4E9F3D;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.forms-container {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.btn-facebook, .btn-google, .btn-primary {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+}
+
+/* .btn-facebook:focus, .btn-google:focus {
+  outline: none;
+} */
+
+.btn-facebook {
+  background-color: #36579a;
+}
+
+.btn-google {
+  background-color: #4285f4;
+}
+
+.btn-text {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 18px;
+}
+
+.container-form__item {
+  color: #4E9F3D;
+  font-size: 14px;
+}
+
+/* .container-form__item::after {
+  border-top: 1px solid rgba(0,0,0,.38);
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 50%;
+} */
+
+.custom-input__wrapper {
+  width: 100%;
+  text-align: start;
+}
+
+.custom-input__input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.btn-primary {
+  background-color: #4E9F3D;
+  transition: all .3s ease-out;
+}
+
+.btn-primary:hover {
+  color: #4E9F3D;
+  background-color:  #D8E9A8;
+}

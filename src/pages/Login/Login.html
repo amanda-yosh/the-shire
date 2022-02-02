@@ -1,0 +1,50 @@
+<div class="login-container">
+    <h1 class="title">The Shire</h1>
+    <div class="explanation">
+      <p class="explanation__paragraph">
+        Ao me logar, aceito os
+        <a href="" target="_blank" class="form-link">Termos de uso</a>
+        e
+        <a href="" target="_blank" class="form-link">Política de privacidade</a>
+        , receber comunicações do Grupo ZAP e afirmo ter 18 anos ou mais.
+      </p>
+    </div>
+    <div class="forms-container">
+      <form id="facebook-form" action="" method="POST" class="container-form">
+        <button type="submit" class="btn-facebook">
+          <span class="btn-text">Entrar com Facebook</span>
+        </button>
+      </form>
+      <form id="google-form" action="" method="POST" class="container-form">
+        <button type="button" class="btn-google">
+          <span class="btn-text">Entrar com Google</span>
+        </button>
+      </form>
+      <form id="email-form" action="/login?source=zap" method="POST" class="container-form">
+        <p class="explanation container-form__item">
+          <span>Ou entre com seu e-mail</span>
+        </p>
+        <div class="custom-input__wrapper">
+          <label for="text-e-mail" class="custom-input__label">E-mail</label>
+          <input type="text" id="text-e-mail" class="custom-input__input" required="" value="" name="username">
+        </div>
+        <div class="custom-input__wrapper">
+          <label for="password-senha" class="custom-input__label">Senha</label>
+          <input type="password" id="password-senha" class="custom-input__input" required="" value="" name="password">
+        </div>
+        <button type="submit" class="btn-primary">
+          <span class="btn-text">Entrar</span>
+        </button>
+        <div class="explanation">
+          <p class="explanation__paragraph">
+            <a class="form-link" href="">Esqueci minha senha</a>
+          </p>
+          <p class="explanation__paragraph">
+            Não possui uma conta?
+            <a class="form-link form-link-spaced" href="">Cadastre-se aqui</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+</div>
