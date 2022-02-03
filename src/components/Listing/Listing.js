@@ -1,6 +1,6 @@
 import { mapMutations } from 'vuex'
 import { router } from '../../router/index.js'
-import { normalizeImageUrl } from '../../helpers/utils'
+import utils from '../../helpers/utils.js'
 
 export default {
   name: 'Listing',
@@ -26,8 +26,8 @@ export default {
   computed: {
     getFirstMediasElementURL() {
       const { url } = this.listing.medias[0]
-      
-      return normalizeImageUrl(url, '/crop/420x236/')
+
+      return utils.normalizeImageUrl(url, '/crop/420x236/')
     },
 
     showLocationId() {
