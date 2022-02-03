@@ -1,3 +1,11 @@
+import { router } from '../../router'
+
 export default ({
-  name: 'Header'
+  name: 'Header',
+
+  methods: {
+    goToLoginPage() {
+      router.push({name: 'login'})
+    }
+  }
 })
