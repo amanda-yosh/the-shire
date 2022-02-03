@@ -1,0 +1,57 @@
+.container-form {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.custom-input__wrapper {
+  margin-top: 10px;
+  text-align: start;
+}
+
+.custom-input__input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 50px;
+  background-color: #4E9F3D;
+  color: #D8E9A8;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.btn-primary:hover {
+  color: #4E9F3D;
+  background-color:  #D8E9A8;
+}
+
+.explanation {
+  margin: 15px;
+}
+
+.explanation-divisor {
+  font-size: 14px;
+  color: #4E9F3D;
+}
+
+.form-link {
+  color: #4E9F3D;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.forms-container {
+  width: 100%;
+  margin: 10px auto;
+}
