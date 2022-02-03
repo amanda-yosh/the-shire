@@ -1,16 +1,26 @@
 <div>
   <LoginHeader />
-  <form id="email-form" action="" method="POST" class="container-form">
+  <form @submit.prevent="login" id="email-form" class="container-form">
     <p class="explanation">
       <span class="explanation-divisor">Ou entre com seu e-mail</span>
     </p>
     <div class="custom-input__wrapper">
-      <label for="text-e-mail" class="input-label">E-mail</label>
-      <input type="text" id="text-e-mail" class="custom-input__input" required="" value="" name="username">
+      <label for="text-e-mail">E-mail</label>
+      <input
+        type="email"
+        class="custom-input__input"
+        required
+        v-model="email"
+      />
     </div>
     <div class="custom-input__wrapper">
-      <label for="password-senha" class="input-label">Senha</label>
-      <input type="password" id="password-senha" class="custom-input__input" required="" value="" name="password">
+      <label for="password-senha">Senha</label>
+      <input
+        type="password"
+        class="custom-input__input"
+        required
+        v-model="password"
+      />
     </div>
     <button type="submit" class="btn-primary">
       <span class="btn-text">Entrar</span>

@@ -1,26 +1,32 @@
 import LoginHeader from '../../components/LoginHeader/LoginHeader.vue'
+import { auth } from '../../firebase'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import utils from '../../helpers/utils'
 
 export default ({
   name: 'SignUp',
 
   components: {
     LoginHeader
-  }
-  // data() {
-  //   return {
-  //     user: '',
-  //     email: '',
-  //     password: ''
-  //   }
-  // },
-  // methods: {
-  //   onSignUp: () => {
-  //     // vuex
-  //     console.log({
-  //       user: this.user,
-  //       email: this.email,
-  //       password: this.password,
-  //     })
-  //   }
-  // }
+  },
+
+  data() { 
+    return {
+      // username: '',
+      email: '',
+      password: '',
+      // phone: ''
+    }
+  },
+
+  methods: {
+    register() {
+      try {
+        createUserWithEmailAndPassword(auth, this.email, this.password)
+        utils.goToPage('profile')
+      } catch (error) {
+        alert(error.message)
+      }
+    },
+  },
 })

@@ -1,29 +1,46 @@
 <div>
   <LoginHeader />
-  <form class="container-form">
+  <form @submit.prevent="register" class="container-form">
     <p class="explanation">
       <span class="explanation-divisor">Ou cadastre com seu e-mail</span>
     </p>
+    <!-- <div class="custom-input__wrapper">
+      <label>Nome e sobrenome</label>
+      <input
+        type="text"
+        class="custom-input__input"
+        required
+        v-model="username"
+      />
+    </div> -->
     <div class="custom-input__wrapper">
-      <label for="text-nome-e-sobrenome" class="custom-input__label">Nome e sobrenome</label>
-      <input type="text" id="text-nome-e-sobrenome" class="custom-input__input" required="" value="" />
+      <label>E-mail</label>
+      <input
+        type="text"
+        class="custom-input__input"
+        required
+        v-model="email"
+      />
     </div>
     <div class="custom-input__wrapper">
-      <label for="text-e-mail" class="custom-input__label">E-mail</label>
-      <input type="text" id="text-e-mail" class="custom-input__input" required="" value="" />
+      <label>Senha (mínimo 8 caracteres)</label>
+      <input
+        type="password"
+        class="custom-input__input"
+        required
+        minlength="8"
+        v-model="password"
+      />
     </div>
-    <div class="custom-input__wrapper">
-      <label for="password-senha-(mínimo-8-caracteres)" class="custom-input__label">Senha (mínimo 8 caracteres)</label>
-      <input type="password" id="password-senha-(mínimo-8-caracteres)" class="custom-input__input" required=""
-        value="" />
-    </div>
-    <div class="custom-input__wrapper">
-      <label for="text-telefone-(opcional)" class="custom-input__label">Telefone
-        (opcional)
-      </label>
-      <input type="text" id="text-telefone-(opcional)" class="custom-input__input" required="" value="" maxlength="15"
-        placeholder=" " size="15" />
-    </div>
+    <!-- <div class="custom-input__wrapper">
+      <label>Telefone (opcional)</label>
+      <input
+        type="text"
+        class="custom-input__input"
+        maxlength="15"
+        v-model="phone"
+      />
+    </div> -->
     <button type="submit" class="btn-primary">
       <span class="btn-text">Cadastrar</span>
     </button>
