@@ -1,11 +1,11 @@
-import { router } from '../../router'
+import utils from '../../helpers/utils'
 
 export default ({
   name: 'Header',
 
   methods: {
     goToLoginPage() {
-      router.push({name: 'login'})
+      utils.goToPage('login')
     }
   }
 })
