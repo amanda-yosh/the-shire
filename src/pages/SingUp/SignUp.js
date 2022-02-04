@@ -12,10 +12,8 @@ export default ({
 
   data() { 
     return {
-      // username: '',
       email: '',
       password: '',
-      // phone: ''
     }
   },
 
