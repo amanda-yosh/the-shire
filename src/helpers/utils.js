@@ -1,14 +1,9 @@
 import { router } from '../router'
 
-function normalizeImageUrl(url, replaceValue) {
+export function normalizeImageUrl(url, replaceValue) {
   return url.replace('/{action}/{width}x{height}/', `${replaceValue}`)
 }
 
-function goToPage(page) {
+export function goToPage(page) {
   return router.push({name: page})
-}
-
-export default {
-  normalizeImageUrl,
-  goToPage
 }
