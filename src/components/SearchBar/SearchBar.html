@@ -1,4 +1,35 @@
 <div class="container">
   <h2 class="title">Encontre o seu cantinho precioso</h2>
-  <input @input="onInput" id="city" placeholder="Cidade..."/>
+  <form @submit.prevent="onSubmit" class="form">
+    <div class="btn-container">
+      <button 
+        @click="changeBusinnes"
+        class="btn"
+        :class="{ active: isSaleActive }"
+        value="SALE"
+        type="button"
+      >
+        Comprar
+      </button>
+      <button
+        @click="changeBusinnes"
+        class="btn"
+        :class="{ active: !isSaleActive }"
+        value="RENTAL"
+        type="button"
+      >
+        Alugar
+      </button>
+    </div>
+
+    <div class="input-container">
+      <input
+        @input.prevent="onInputCity"
+        v-model="citySearch"
+        id="city"
+        placeholder="Cidade..."
+      />
+    </div>
+    <button class="btn btn-submit" type="submit">Buscar</button>
+  </form>
 </div>
