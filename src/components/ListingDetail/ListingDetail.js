@@ -35,6 +35,19 @@ export default ({
 
       return normalizeImageUrl(url, '/fit-in/136x94/')
     },
+
+    businessType() {
+      const businessType = this.listing.listing.pricingInfos[0].businessType
+
+      if (businessType === 'SALE') return 'VENDA'
+      if (businessType === 'RENTAL') return 'ALUGUEL'
+    },
+
+    price() {
+      let price = this.listing.listing.pricingInfos[0].price
+
+      return `R$ ${price}`
+    },
   },
 
   methods: {
