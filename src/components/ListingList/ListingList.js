@@ -1,4 +1,5 @@
 import Listing from '../Listing/Listing.vue'
+import { mapGetters } from 'vuex'
 
 export default ({
   name: 'ListingList',
@@ -7,7 +8,11 @@ export default ({
     Listing
   },
 
-  props: {
-    listings: []
-  }
+  computed: {
+    ...mapGetters(['getListings']),
+
+    getListingLength() {
+      return this.getListings.length
+    }
+  },
 })
