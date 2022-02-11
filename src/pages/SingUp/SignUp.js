@@ -1,7 +1,7 @@
 import LoginHeader from '../../components/LoginHeader/LoginHeader.vue'
 import { auth } from '../../firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import utils from '../../helpers/utils'
+import { goToPage } from '../../helpers/utils'
 
 export default ({
   name: 'SignUp',
@@ -21,7 +21,7 @@ export default ({
     register() {
       try {
         createUserWithEmailAndPassword(auth, this.email, this.password)
-        utils.goToPage('profile')
+        goToPage('profile')
       } catch (error) {
         alert(error.message)
       }
