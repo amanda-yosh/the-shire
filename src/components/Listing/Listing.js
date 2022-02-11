@@ -1,6 +1,6 @@
 import { mapMutations } from 'vuex'
 import { router } from '../../router/index.js'
-import { normalizeImageUrl } from '../../helpers/utils'
+import { normalizeImageUrl } from '../../helpers/utils.js'
 
 export default {
   name: 'Listing',
