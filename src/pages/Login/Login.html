@@ -1,0 +1,39 @@
+<div>
+  <LoginHeader />
+  <form @submit.prevent="login" id="email-form" class="container-form">
+    <p class="explanation">
+      <span class="explanation-divisor">Ou entre com seu e-mail</span>
+    </p>
+    <div class="custom-input__wrapper">
+      <label for="text-e-mail">E-mail</label>
+      <input
+        type="email"
+        class="custom-input__input"
+        required
+        v-model="email"
+      />
+    </div>
+    <div class="custom-input__wrapper">
+      <label for="password-senha">Senha</label>
+      <input
+        type="password"
+        class="custom-input__input"
+        required
+        v-model="password"
+      />
+    </div>
+    <button type="submit" class="btn-primary">
+      <span class="btn-text">Entrar</span>
+    </button>
+    <div class="explanation">
+      <p>
+        <a class="form-link" href="">Esqueci minha senha</a>
+      </p>
+      <p>
+        Não possui uma conta?
+        <router-link class="form-link" to="/signup">Cadastre-se aqui</router-link>
+      </p>
+    </div>
+  </form>
+</div>
+</div>

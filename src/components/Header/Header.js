@@ -1,3 +1,11 @@
+import utils from '../../helpers/utils'
+
 export default ({
-  name: 'Header'
+  name: 'Header',
+
+  methods: {
+    goToLoginPage() {
+      utils.goToPage('login')
+    }
+  }
 })

@@ -3,7 +3,7 @@ import { mapGetters } from 'vuex'
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import { normalizeImageUrl } from '../../helpers/utils'
+import utils from '../../helpers/utils'
 
 export default ({
   name: 'ListingDetail',
@@ -32,8 +32,7 @@ export default ({
 
     advertiserLogoUrl() {
       const url = this.listing.account.logoUrl
-
-      return normalizeImageUrl(url, '/fit-in/136x94/')
+      return utils.normalizeImageUrl(url, '/fit-in/136x94/')
     },
   },
 
@@ -53,7 +52,7 @@ export default ({
     imageURL() {
       const medias = this.listing.medias
       medias.forEach(media => {
-        media.url = normalizeImageUrl(media.url, '/fit-in/800x360/')
+        media.url = utils.normalizeImageUrl(media.url, '/fit-in/800x360/')
       })
 
       this.listing.medias = medias
