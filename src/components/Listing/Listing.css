@@ -72,7 +72,6 @@
   width: 50%;
   height: 100%;
   overflow: hidden;
-  transition: all 0.3s ease-out;
 }
 
 .img {
@@ -82,14 +81,12 @@
 
 .info {
   position: absolute;
+  top: 270px;
   height: 100%;
   width: 100%;
   bottom: 0;
   color: #191A19;
   line-height: 1.8;
-  /* cursor: no-drop; */
-  transition: all 0.3s ease-out;
-  transform: translateY(-100px);
 }
 
 .info-list {
@@ -116,14 +113,14 @@
   color: #1E5128;
 }
 
-.advertiser-image:hover .info {
-  transform: translateY(270px);
-}
-
 .icon-verse {
   display: none;
 }
 
-.icon:hover + .icon-verse {
-  display: block;
+.icon-verse:hover {
+  display: inline;
 }
+
+/* .icon:hover + .icon-verse {
+  display: block;
+} */
