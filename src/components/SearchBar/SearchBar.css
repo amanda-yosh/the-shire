@@ -1,19 +1,10 @@
 .container {
   width: 70vw;
-  margin: 0 auto;
-  padding: 6rem 0 0 0;
+  align-self: center; /* alinha ao centro da página no eixo y, é filho de container que é um display flex */
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.title {
-  color: #D8E9A8;
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-size: 36px;
-  font-weight: 300;
+  margin: 1.2rem auto; /* alinha ao centro no eixo x */
 }
 
 input {

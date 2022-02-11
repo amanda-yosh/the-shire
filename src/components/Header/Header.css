@@ -1,45 +1,12 @@
-.container {
+.background {
   width: 100vw;
   height: 90px;
-  background-color: #4E9F3D;
+  background-image: url('../../assets/the-shire-1.jpeg');
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  font-family: 'Berkshire Swash', cursive;
-  color: #D8E9A8;
 }
 
 .logo {
+  align-self: center;
   margin-left: 20px;
-  padding: 0 20px;
-}
-
-.link {
-  text-decoration: none;
-  color: #D8E9A8;
-}
-
-.nav {
-  height: 100%;
-  list-style: none;
-}
-
-.item {
-  height: 100%;
-  padding: 0 20px;
-  margin-right: 20px;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all .3s ease-out;
-}
-
-.item:hover {
-  color:#1E5128;
-  background-color: #D8E9A8;
 }

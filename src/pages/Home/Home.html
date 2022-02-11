@@ -1,7 +1,4 @@
 <div>
-  <Header />
-  <div class="search-container">
-    <SearchBar @termChange="onTermChange"></SearchBar>
-  </div>
+  <SearchBar @termChange="onTermChange"></SearchBar>
   <ListingList :listings="advertsList"></ListingList>
 </div>

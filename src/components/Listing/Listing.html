@@ -1,34 +1,36 @@
 <div class="container">
   <div class="advertiser-details">
     <h1 class="title">{{ listing["listing"]["title"] }}</h1>
-    <span class="location-info">{{ showLocationId }}</span>
-    <p class="information" v-html="listing['listing']['description']"></p>  
-    <button @click="goToDetailPage(listing['listing']['id'])" class="btn">Saiba mais</button>
+    <span>{{ listing["listing"]["originalAddress"]["locationId"] }}</span>
+    <p class="information">{{ listing["listing"]["description"] }}</p>
+
+    <div class="control">
+      <button @click="goToDetailPage(listing['listing']['id'])" class="btn">Saiba mais</button>
+    </div>
   </div>
   <div class="advertiser-image">
     <img
       class="img"
       :src="getFirstMediasElementURL"
-      alt="Imagem do anúncio"
+      alt=""
     />
 
     <div class="info">
-      <ul class="info-list">
+      <h2 class="sub-title">Características do imóvel</h2>
+      <ul>
         <li>
-          <strong class="icon-verse">{{ listing["listing"]["bedrooms"][0] }}</strong>
-          <i class="icon fas fa-bed"></i>
+          <strong>Quartos : </strong>{{ listing["listing"]["bedrooms"][0] }}
         </li>
         <li>
-          <strong class="icon-verse">{{ listing["listing"]["bathrooms"][0] }}</strong>
-          <i class="icon fas fa-bath"></i>
+          <strong>Banheiros : </strong
+          >{{ listing["listing"]["bathrooms"][0] }}
         </li>
         <li>
-          <strong class="icon-verse">{{ listing["listing"]["usableAreas"][0] }}m²</strong>
-          <i class="icon fas fa-ruler-horizontal"></i>
+          <strong>Suítes: </strong>{{ listing["listing"]["suites"][0] }}
         </li>
         <li>
-          <strong class="icon-verse">{{ listing["listing"]["parkingSpaces"][0] }}</strong>
-          <i class="icon fas fa-car"></i>
+          <strong>Garagem: </strong
+          >{{ listing["listing"]["parkingSpaces"][0] }}
         </li>
       </ul>
     </div>
