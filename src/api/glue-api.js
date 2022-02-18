@@ -5,12 +5,7 @@ const resultPage = '/listings?categoryPage=RESULT'
 const listingPage = '/page'
 const villageHouse = '&unitSubTypes=VILLAGE_HOUSE&unitTypes=HOME&usageTypes=RESIDENTIAL&unitTypesV3=VILLAGE_HOUSE&text=Casa+de+Vila'
 
-// urlBuild function
-
 export async function getListings(searchTerm) {
-  // const searchTermStringified = new URLSearchParams(searchTerm)
-  // &addressState=Rio+de+Janeiro
-  // const search = `&business=${business}&addressCity=${searchCity}`
 
   try {
     const response = await get(`${BASE_URL}${resultPage}${villageHouse}${searchTerm}`)
