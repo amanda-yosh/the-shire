@@ -1,0 +1,90 @@
+<section class="modal">
+  <div class="left">
+    <bath-and-bed 
+      context="bath"/>
+    <bath-and-bed 
+      context="bedroom"/>
+
+    <div class="area">
+      <h3 class="title">Área do imóvel</h3>
+
+      <div>
+        <label for="min">Mínimo</label>
+        <input class="area-input" id="min" type="text">
+      </div>
+
+      <div>
+        <label for="max">Máximo</label>
+        <input class="area-input" id="max" type="text">
+      </div>
+    </div>
+
+    <div class="checkbox-container">
+      <label for="">
+        <h3 class="checkbox-title">Características do imóvel</h3>
+        <div class="checkbox-comp" v-for="item in 31">
+          <input class="checkbox" type="checkbox" id="">
+          <p>{{ item }}</p>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="right">
+    <div class="right-container">
+      <label for="security">
+        <h3 class="checkbox-title">Segurança</h3>
+        <div class="checkbox-comp" v-for="item in security">
+          <input class="checkbox" type="checkbox" id="security">
+          <p>{{ item }}</p>
+        </div>
+      </label>
+    </div>
+
+    <div class="right-container">
+      <label for="leisure">
+        <h3 class="checkbox-title">Lazer e esporte</h3>
+        <div class="checkbox-comp" v-for="item in security">
+          <input class="checkbox" type="checkbox" id="leisure">
+          <p>{{ item }}</p>
+        </div>
+      </label>
+    </div>
+
+    <div class="right-container">
+      <label for="condominium">
+        <h3 class="checkbox-title">Condomínio</h3>
+        <div class="checkbox-comp" v-for="item in condominium">
+          <input class="checkbox" type="checkbox" id="condominium">
+          <p>{{ item }}</p>
+        </div>
+      </label>
+    </div>
+
+    <div class="right-container">
+      <h3 class="checkbox-title">Tour virtual ou vídeo</h3>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="right-container">
+      <h3 class="checkbox-title">Endereço completo</h3>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="right-container">
+      <h3 class="checkbox-title">Código do imóvel</h3>
+      <input type="text">
+    </div>
+
+
+  </div>
+
+</section>
