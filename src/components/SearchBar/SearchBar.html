@@ -1,4 +1,8 @@
 <div class="container">
   <h2 class="title">Encontre o seu cantinho precioso</h2>
   <input @input="onInput" id="city" placeholder="Cidade..."/>
+  <button :class="{active: modalOpen}" class="more-filters-button" @click="openMoreFilters">Mais filtros</button>
+
+  <!-- modal -->
+  <MoreFiltersModal v-show="modalOpen"/>
 </div>
