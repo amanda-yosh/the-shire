@@ -3,13 +3,22 @@ import { BASE_URL } from '../settings/constants'
 
 const resultPage = '/listings?categoryPage=RESULT'
 const listingPage = '/page'
-const villageHouse = '&unitSubTypes=VILLAGE_HOUSE&unitTypes=HOME&usageTypes=RESIDENTIAL&unitTypesV3=VILLAGE_HOUSE'
+
+function buildQuerySearchParams() {
+  const params = new URLSearchParams({
+    unitSubTypes: 'VILLAGE_HOUSE',
+    unitTypes: 'HOME',
+    usageTypes: 'RESIDENTIAL',
+    unitTypesV3: 'VILLAGE_HOUSE',
+    text: 'Casa+de+Vila'
+  })
+
+  return '&' + params.toString()
+}
 
 export async function getListings(searchTerm) {
-  const searchTermStringified = new URLSearchParams(searchTerm)
-
   try {
-    const response = await get(`${BASE_URL}${resultPage}${villageHouse}${searchTermStringified}`)
+    const response = await get(`${BASE_URL}${resultPage}${buildQuerySearchParams()}${searchTerm}`)
     return response.data.search.result.listings
   } catch (error) {
     console.log(error)

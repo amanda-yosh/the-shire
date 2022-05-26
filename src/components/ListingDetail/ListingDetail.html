@@ -30,11 +30,12 @@
     </div>
 
     <div class="description">
-      <h2>Descrição</h2>
-      <p>Preço: {{ listing.listing.pricingInfos[0].price }}</p>
+      <h2>{{ listing.listing.title }}</h2>
+
+      <p>{{ businessType }}</p>
+      <p>{{ price }}</p>
       <p>Condomínio: {{ listing.listing.pricingInfos[0].monthlyCondoFee }}</p>
       <p>IPTU: {{ listing.listing.pricingInfos[0].yearlyIptu }}</p>
-      <p>{{ listing.listing.pricingInfos[0].businessType }}</p>
       <p v-html="listing.listing.description"></p>
       <p>{{ listing.listing.searchableAmenities }}</p>
     </div>

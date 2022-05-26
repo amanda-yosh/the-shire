@@ -5,7 +5,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .title {
@@ -16,10 +16,46 @@
   font-weight: 300;
 }
 
+.form {
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+}
+
+.btn {
+  padding: 15px;
+  background-color: #D8E9A8;
+  font-family: 'Nunito', sans-serif;
+  border: 1px solid #1E5128;
+  color: #1E5128;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.btn-submit:hover {
+  color:#D8E9A8;
+  background-color: #1E5128;
+}
+
 input {
   width: 100%;
-  margin: .5rem 0;
-  padding: 10px 0 10px 30px;
-  border: 2px solid;
-  border-radius: 6px;
+  padding: 15px 0 15px 30px;
+  font-family: 'Nunito', sans-serif;
+  border: 1px solid #1E5128;
+  color: #1E5128;
+}
+
+.active {
+  color:#D8E9A8;
+  background-color: #1E5128;
 }
